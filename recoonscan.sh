@@ -45,9 +45,7 @@ for i in $(cat hosts.txt); do
                 print $1
             }' "$FILE_NMAP"
         )
-        
-        #echo "Tutte le porte scansionate su $i ${#all_ports[@]}: ${all_ports[*]}"
-        
+
         echo "--- Nmap scan of $i ended ---" >> log_recoonscan.log
         
         https_ports=$(grep "https" $i/nmap/$i.nmap | cut -d'/' -f1)
