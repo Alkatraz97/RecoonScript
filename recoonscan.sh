@@ -98,6 +98,7 @@ for i in $(cat hosts.txt); do
 
     DATE_FORMATTED=$(date +"%d:%m:%Y %H:%M")
     echo "--- Scan_of_$i"_completed" --- $DATE_FORMATTED" >> log_recoonscan.log
+    notify-send "Scan of $i completed"
     		
 done
 
